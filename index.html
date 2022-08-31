@@ -3,40 +3,78 @@
     <head>
         <title>Chris Machado's Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="css/bootstrap.css"  media="screen">
+
+        <style>
+            * {
+                text-align: left;
+                color: rgba(142, 159, 159, 0.653)
+            }
+            .navbar-brand {
+                font-family:cursive;
+                font-size:xx-large;
+            }
+            .container-fluid {
+                background: #181b6d;
+                text-align: left;
+               
+            }
+            .container {
+                background-color: #181b6d;
+            }
+        </style>
     </head>
 
+
+
+
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #181b6d;">
-        <a class="navbar-brand" href="#">Chris Machado</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- div containing the toggable navigation -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- navigation menu -->
-            <ul class="navbar-nav mr-auto">
-            <!-- active link corresponding to the current page -->
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Me</a>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://chris-machado.github.io/projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="#">Hobies</a>
-                </li>
+        <div class="container-fluid">
+          <a class="navbar-brand">O</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Me</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="https://chris-machado.github.io/projects.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Projects
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
             </ul>
-          
+          </div>
         </div>
-    </nav>
+      </nav>
+
+
+
+
+
+
+
+
+
     
     <body>
         <div class="row">
             <header class="col jumbotron jumbotron-fluid">
               <div class="container-fluid">
-                <h1 class="display-4 text-light">
+                <h1 class="display-4 text-bg">
                   Chris Machado
                 </h1>
                 <p class="lead text-light">Oceanographer / Data Scientist</p>
