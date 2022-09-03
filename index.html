@@ -14,14 +14,20 @@
                 font-family:cursive;
                 font-size:xx-large;
             }
-            .container-fluid {
-                background: #181b6d;
-                text-align: left;
-               
-            }
             .container {
-                background-color: #181b6d;
+                background-color: #0a0b2e;
             }
+            .gradient-custom {
+                /* fallback for old browsers */
+                background: #181b6d;
+
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: -webkit-linear-gradient(to bottom, rgba(24, 27, 109, 1), rgba(10, 11, 46, 1));
+
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background: linear-gradient(to bottom, rgba(24, 27, 109, 1), rgba(10, 11, 46, 1))
+}
+
         </style>
     </head>
 
@@ -71,11 +77,11 @@
     <body>
         <div class="row">
             <header class="col jumbotron jumbotron-fluid">
-              <div class="container-fluid">
-                <h1 class="display-4 text-bg">
-                  Chris Machado
-                </h1>
-                <p class="lead text-light">Oceanographer / Data Scientist</p>
+              <div class="container-fluid gradient-custom">
+                    <h1 class="display-4 text-bg">
+                      Chris Machado
+                    </h1>
+                    <p class="lead text-light">Oceanographer / Data Scientist</p> 
               </div>
             </header>
           </div>
