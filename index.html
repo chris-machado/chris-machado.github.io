@@ -26,7 +26,17 @@
 
                 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 background: linear-gradient(to bottom, rgba(24, 27, 109, 1), rgba(10, 11, 46, 1))
-}
+            }
+            .gradient-custom2 {
+                /* fallback for old browsers */
+                background: #0a0b2e;
+
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: -webkit-linear-gradient(to bottom, rgba(10, 11, 46, 1), rgb(4, 4, 17));
+
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background: linear-gradient(to bottom, rgba(10, 11, 46, 1), rgb(4, 4, 17))
+            }
 
         </style>
     </head>
@@ -81,10 +91,38 @@
                     <h1 class="display-4 text-bg">
                       Chris Machado
                     </h1>
-                    <p class="lead text-light">Oceanographer / Data Scientist</p> 
+                    <p class="lead text-light">Oceanographer / Data Scientist</p><br> 
               </div>
             </header>
           </div>
+
+      <div class="container-fluid gradient-custom2">
+        <div class="row text-center">
+          <div class="col-sm">
+            <h1>Test 1</h1>
+          </div>
+          <div class="col-sm">
+            <h1>Test 2</h1>
+          </div>
+          <div class="col-sm">
+            <h1>Test 3</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" style="background-color: #040411;">
+        <div class="row text-center">
+          <div class="col-sm">
+            <h1>MIT xPRO Assignments:</h1>
+          </div>
+          <div class="col-sm">
+            <h1>Test 2</h1>
+          </div>
+          <div class="col-sm">
+            <h1>Test 3</h1>
+          </div>
+        </div>
+      </div>
 
     <h1>MIT xPRO Assignments:</h1>
         <a href="https://chris-machado.github.io/PCDE-Activity-9.1/">PCDE-Activity 9.1</a><br>
