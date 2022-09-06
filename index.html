@@ -16,6 +16,8 @@
             }
             .container {
                 background-color: #0a0b2e;
+                position:relative;
+                width: 90%;
             }
             .gradient-custom {
                 /* fallback for old browsers */
@@ -37,6 +39,42 @@
                 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 background: linear-gradient(to bottom, rgba(10, 11, 46, 1), rgb(4, 4, 17))
             }
+            .image {
+              display:block;
+            width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 3%;
+  right: 0%;
+  height: 100%;
+  width: 94%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #000000bd;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
 
         </style>
     </head>
@@ -101,17 +139,34 @@
           </div>
       </header>    
 
+    
+
+
 
       <div class="container-fluid gradient-custom2">
-        <div class="row text-center">
+        <div class="row">
           <div class="col-sm">
-            <h1>Test 1</h1>
+            <div class="container gradient-custom2">
+              <a href="https://github.com/chris-machado/Housing_Prediction_Model/blob/main/HousePriceProject.ipynb">
+                <img src="media/property_worth.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                  <div class="text">MLR Model to Predict House Prices</div>
+                </div>
+               </a> 
+              </div>
           </div>
           <div class="col-sm">
-            <h1>Test 2</h1>
+            <div class="container gradient-custom2">
+              <a href="https://github.com/chris-machado/ETL_Timeseries/blob/main/TimeSeries_MRTS.ipynb">
+                <img src="media/ecommerce.jpeg" alt="Ecommerce" class="image">
+                <div class="overlay">
+                  <div class="text">MySQL ETL & Time Series Analysis on the MRTS Dataset</div>
+                </div>
+              </a>
+              </div>
           </div>
           <div class="col-sm">
-            <h1>Test 3</h1>
+            <h1>Under Construction</h1>
           </div>
         </div>
       </div>
