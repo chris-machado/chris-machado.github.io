@@ -9,16 +9,36 @@
             * {
                 text-align: left;
                 color: rgba(142, 159, 159, 0.653)
+              }
+
+            .fadeline {
+                margin: 50px 0;
+                position: relative;
+                
+                    @color:#f1d479;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    display: block;
+                    background: #f1d479;
+                    background: radial-gradient( fadeout(#f1d479, 0%) 40%, fadeout(#f1d479, 100%) 80%);
+                
             }
+
             .navbar-brand {
                 font-family:cursive;
                 font-size:xx-large;
             }
+
             .container {
                 background-color: #0a0b2e;
                 position:relative;
                 width: 90%;
             }
+
             .gradient-custom {
                 /* fallback for old browsers */
                 background: #181b6d;
@@ -29,6 +49,7 @@
                 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 background: linear-gradient(to bottom, rgba(24, 27, 109, 1), rgba(10, 11, 46, 1))
             }
+
             .gradient-custom2 {
                 /* fallback for old browsers */
                 background: #0a0b2e;
@@ -39,40 +60,41 @@
                 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 background: linear-gradient(to bottom, rgba(10, 11, 46, 1), rgb(4, 4, 17))
             }
+
             .image {
               display:block;
             width: 100%;
-  height: auto;
-}
+              height: auto;
+            }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0%;
-  right: 0%;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #000000bd;
-}
+            .overlay {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0%;
+              right: 0%;
+              height: 100%;
+              width: 100%;
+              opacity: 0;
+              transition: .5s ease;
+              background-color: #000000bd;
+            }
 
-.container:hover .overlay {
-  opacity: 1;
-}
+            .container:hover .overlay {
+              opacity: 1;
+            }
 
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+            .text {
+              color: white;
+              font-size: 20px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+              text-align: center;
+            }
 
 
 
@@ -144,7 +166,11 @@
 
       
       <div class="container-fluid gradient-custom2 overflow-hidden">
-        <h1>Projects:</h1>
+        <div class="row gx-2 gy-5">
+          <div class="col">
+            <hr class="hr-text" data-content="PROJECTS"> </hr>
+          </div>
+        </div>
         <div class="row gx-2 gy-5">
           <div class="col-sm">
             <div class="container gradient-custom2">
@@ -168,7 +194,7 @@
           </div>
           <div class="col-sm">
             <div class="container gradient-custom2">
-              <a href="https://github.com/chris-machado/ETL_Timeseries/blob/main/TimeSeries_MRTS.ipynb">
+              <a href="http://ec2-3-95-194-165.compute-1.amazonaws.com">
                 <img src="media/books2.jpeg" alt="Ecommerce" class="image">
                 <div class="overlay">
                   <div class="text">Bookstore Web App Using Flask Hosted on AWS</div>
