@@ -16,17 +16,46 @@
                 position: relative;
                 
                     @color:#f1d479;
-                    position: absolute;
+                    position: relative;
                     bottom: 0;
                     left: 0;
-                    content: "";
+                    content: "TEST";
                     width: 100%;
-                    height: 2px;
+                    height: 4px;
                     display: block;
-                    background: #f1d479;
-                    background: radial-gradient( fadeout(#f1d479, 0%) 40%, fadeout(#f1d479, 100%) 80%);
-                
+                    background: radial-gradient(rgba(142, 159, 159, 0.653), rgba(10, 11, 46, 1)  )                
             }
+
+            .hr-text {
+                line-height: 1em;
+                position: relative;
+                outline: 0;
+                border: 0;
+                color: rgba(142, 159, 159, 0.653);
+                text-align: top;
+                height: 1.5em;
+                opacity: 1;
+                
+                
+                  background: linear-gradient(rgba(142, 159, 159, 0.653), rgba(10, 11, 46, 1) );
+                  position: relative;
+                  left: 0;
+                  top: 0%;
+                  width: 100%;
+                  height: 10px;
+               
+                  content: attr(data-content);
+                  position: relative;
+                  display: inline-block;
+                  color: black;
+                  text-decoration-color: aliceblue;
+
+                  padding: 2 6em;
+                  line-height: 1.5em;
+                } 
+              }
+                
+              
 
             .navbar-brand {
                 font-family:cursive;
@@ -149,6 +178,7 @@
                     <p class="lead text-light">Father / Husband / Veteran <br>Oceanographer / Data Scientist
                     </p>
  
+                  <div class="heading text-align:center">PROJECTS</div>
               </div>
               <div class="col gradient-custom">
                 <br>
@@ -167,8 +197,11 @@
       
       <div class="container-fluid gradient-custom2 overflow-hidden">
         <div class="row gx-2 gy-5">
+          <div class="col-1">
+            <iframe src="https://global-mind.org/gcpdot/gcp.html" height="48" width="48" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" ></iframe>
+          </div>
           <div class="col">
-            <hr class="hr-text" data-content="PROJECTS"> </hr>
+            <h1>PROJECTS</h1>
           </div>
         </div>
         <div class="row gx-2 gy-5">
