@@ -96,8 +96,8 @@ width: 100%;
 }
 
 .text-hover {
-  color: rgb(134, 129, 129);
-  font-family: Calibri;
+  color: rgb(223, 216, 216);
+  font-family: Monaco;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -113,6 +113,6 @@ width: 100%;
   font-size: 18px;
   position: absolute;
 }
-.height250 {
-  height: 250px;
+.height200 {
+  height: 200px;
 }
