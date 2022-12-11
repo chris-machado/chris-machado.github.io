@@ -55,7 +55,7 @@
     background: #181b6d;
 
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to bottom, rgba(24, 27, 109, 1), rgba(10, 11, 46, 1));
+    background: -webkit-linear-gradient(to bottom, rgb(27, 30, 124), rgb(23, 26, 107));
 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to bottom, rgba(24, 27, 109, 1), rgba(10, 11, 46, 1))
@@ -70,6 +70,17 @@
 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to bottom, rgba(10, 11, 46, 1), rgb(4, 4, 17))
+}
+
+.gradient-custom3 {
+  /* fallback for old browsers */
+  background: #0a0b2e;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to bottom, rgba(10, 11, 46, 1), rgb(4, 4, 17));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to bottom, rgba(10, 11, 46, 1), rgb(4, 4, 17))
 }
 
 .image {
@@ -111,7 +122,7 @@ width: 100%;
   color: rgb(176, 186, 186);
   font-family: sans-serif;
   font-size: 18px;
-  position: absolute;
+  position: relative
 }
 .height200 {
   height: 200px;
