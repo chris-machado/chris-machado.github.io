@@ -83,15 +83,26 @@
   background: linear-gradient(to bottom, rgba(11, 11, 49, 1), rgb(4, 4, 17))
 }
 
+.gradient-custom4 {
+  /* fallback for old browsers */
+  background: #0a0b2e;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to bottom, rgba(4, 4, 17, 1), rgb(4, 4, 17));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to bottom, rgba(4, 4, 17, 1), rgb(4, 4, 17))
+}
+
 .image {
   display: block;
-  width: 50%;
+  width: 60%;
   height: auto;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
+  top: 0; 
   bottom: 0;
   left: 0%;
   right: 0%;
@@ -132,4 +143,12 @@
 }
 .height135 {
   height: 135px;
+}
+
+.ml-1 {
+  margin-left: 14;
+}
+
+.pad-left {
+  padding-left: 80px;
 }
