@@ -131,9 +131,9 @@
   text-align: center;
 }
 .text-sans {
-  color: rgba(170, 190, 190, 0.653);
+  color: rgba(180, 202, 202, 0.653);
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   position: relative
 }
 .height200 {
