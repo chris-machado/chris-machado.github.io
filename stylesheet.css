@@ -48,7 +48,7 @@
 .container {
     background-color: #0a0b2e;
     position:relative;
-    width: 90%;
+    width: 100%;
 }
 
 .gradient-custom {
@@ -107,30 +107,29 @@
 
 .image {
   display: block;
-  width: 60%;
+  width: 100%;
   height: auto;
 }
 
 .overlay {
   position: absolute;
-  top: 0; 
+  top: 0;
   bottom: 0;
-  left: 0%;
+  left: 1%;
   right: 0%;
   height: 100%;
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #000000bd;
+  background-color: rgba(0, 0, 0, 1);
+}
+.container:hover .overlay {
+  opacity: .7;
 }
 
-.container:hover .overlay {
-  opacity: 1;
-}
 
 .text-hover {
-  color: rgb(223, 216, 216);
-  font-family: Monaco;
+  color: white;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -155,6 +154,7 @@
 .height135 {
   height: 135px;
 }
+
 
 .ml-1 {
   margin-left: 14;
