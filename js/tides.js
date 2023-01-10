@@ -16,8 +16,9 @@ map.on('load', () => {
                 'type': 'Feature',
                 'properties': {
                     'id': 'Sewells Point',
+                    'station_id':'8638610',
                     'description':
-                    '<img src="static/8638610.png" width="600">'
+                    '<canvas id="myChart" width="400" height="200"></canvas>',
                 },
                 'geometry': {
                     'type': 'Point',
@@ -104,6 +105,7 @@ map.on('mouseenter', 'places', (e) => {
     // Copy coordinates array.
     const coordinates = e.features[0].geometry.coordinates.slice();
     const description = e.features[0].properties.description;
+    const station_id = e.features[0].properties.station_id;
     
     // Ensure that if the map is zoomed out such that multiple
     // copies of the feature are visible, the popup appears
@@ -114,13 +116,46 @@ map.on('mouseenter', 'places', (e) => {
 
     // Populate the popup and set its coordinates
     // based on the feature found.
-    popup_element = popup.setLngLat(coordinates).setHTML(description)
+    //popup_element = popup.setLngLat(coordinates).setHTML(description);
+    popup_element = popup.setLngLat(coordinates).setHTML(description);
     
     popup_element.addTo(map);
+    tides(station_id);
+////////////////
+    async function tides(station_id) {
+        let url_str = "http://ec2-18-233-120-8.compute-1.amazonaws.com:8080/get?station=" + station_id;
+        const response = await fetch(url_str);
+        const data = await response.json();
+        
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+        type: 'line',
+        data: {
+            datasets: [{
+            label: 'Water Level',
+            data: data,
+            borderWidth: .2,
+            }]
+        },
+        options: {
+            scales: {
+            y: {
+                beginAtZero: false
+            }
+            },
+            spanGaps: true,
+            showLine: true,
+        }
+        });
+    }
 });
 
-map.on('mouseleave', 'places', () => {
+map.on('click', 'places', () => {
     map.getCanvas().style.cursor = '';
     popup.remove();
 });
 });
+
+
+  
