@@ -3,7 +3,7 @@ const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/outdoors-v12',
     center: [-76.2170,37.0281],
-    zoom: 10
+    zoom: 9
 });
 
 map.on('load', () => {
@@ -18,7 +18,7 @@ map.on('load', () => {
                     'id': 'Sewells Point',
                     'station_id':'8638610',
                     'description':
-                    '<canvas id="myChart" width="400" height="200"></canvas>',
+                    '<canvas id="myChart" width="800" height="600"></canvas>',
                 },
                 'geometry': {
                     'type': 'Point',
@@ -98,7 +98,7 @@ const popup = new mapboxgl.Popup({
 });
 
 
-map.on('mouseenter', 'places', (e) => {
+map.on('mouseover', 'places', (e) => {
     // Change the cursor style as a UI indicator.
     map.getCanvas().style.cursor = 'pointer';
     
@@ -135,7 +135,7 @@ map.on('mouseenter', 'places', (e) => {
             datasets: [{
             label: 'Water Level',
             data: data,
-            borderWidth: .2,
+            // borderWidth: .2,
             }]
         },
         options: {
@@ -151,7 +151,7 @@ map.on('mouseenter', 'places', (e) => {
     }
 });
 
-map.on('click', 'places', () => {
+map.on('click', () => {
     map.getCanvas().style.cursor = '';
     popup.remove();
 });
