@@ -3,7 +3,7 @@ const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/outdoors-v12',
     center: [-76.2170,37.0281],
-    zoom: 9
+    zoom: 10
 });
 
 map.on('load', () => {
@@ -134,7 +134,7 @@ map.on('mouseover', 'places', (e) => {
         data: {
             datasets: [{
             label: 'Water Level',
-            data: data,
+            data: data.values,
             // borderWidth: .2,
             }]
         },
@@ -151,7 +151,7 @@ map.on('mouseover', 'places', (e) => {
     }
 });
 
-map.on('click', () => {
+map.on('mouseleave', 'source', () => {
     map.getCanvas().style.cursor = '';
     popup.remove();
 });
