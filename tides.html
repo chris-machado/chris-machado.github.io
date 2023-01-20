@@ -6,22 +6,29 @@
         <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
         <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+        <link href="css/custom_mapbox.css" rel="stylesheet">
         <style>
         body { margin: 0; padding: 0; }
-        #map { position: absolute; top: 50px; bottom: 30px; left: 30px; right: 30px}
+        #map { position: absolute; top: 30px; bottom: 30px; left: 30px; right: 30px}
         </style>
     </head>
 <body>
-    <style>
-        .mapboxgl-popup {
+       <style>
+     /*    .mapboxgl-popup {
             max-height: 1200px;
-            max-width: 1000px;
-            min-width: 600px;
-            min-height: 800px;
-            font: 18px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-        }
-    </style> 
-    <div id="map"></div>
+            max-width: 1000px; 
+            max-width: 600px;
+            max-height: 600px;
+            font: 18px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif; 
+        } */
+    </style>
+    <div class="container">
+        <div class="text_box">
+            <div id="workings">Click Here to See How It Works</div>
+        </div>
+        <div id="map"></div>
+    </div>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js"></script>
     <script src="js/tides.js"></script>

@@ -18,7 +18,7 @@ map.on('load', () => {
                     'id': 'Sewells Point',
                     'station_id':'8638610',
                     'description':
-                    '<canvas id="myChart" width="800" height="600"></canvas>',
+                    '<canvas id="myChart" width="600" height="400"></canvas>',
                 },
                 'geometry': {
                     'type': 'Point',
@@ -29,8 +29,9 @@ map.on('load', () => {
                 'type': 'Feature',
                 'properties': {
                     'id': 'Money Point',
+                    'station_id': '8639348',
                     'description':
-                    '<img src="static/8639348.png" width="600">'
+                    '<canvas id="myChart" width="600" height="400"></canvas>',
                     },
                     'geometry': {
                         'type': 'Point',
@@ -41,8 +42,9 @@ map.on('load', () => {
                 'type': 'Feature',
                 'properties': {
                     'id': 'Kiptopeke',
+                    'station_id': '8632200',
                     'description':
-                    '<img src="static/8632200.png" width="600">'
+                    '<canvas id="myChart" width="600" height="400"></canvas>',
                 },
                 'geometry': {
                     'type': 'Point',
@@ -53,8 +55,9 @@ map.on('load', () => {
                 'type': 'Feature',
                 'properties': {
                     'id':'Chesapeake Bay Bridge Tunnel',
+                    'station_id': '8638901',
                     'description':
-                    '<img src="static/8638901.png" width="600">'
+                    '<canvas id="myChart" width="600" height="400"></canvas>',
                 },
                 'geometry': {
                     'type': 'Point',
@@ -65,8 +68,9 @@ map.on('load', () => {
                 'type': 'Feature',
                 'properties': {
                     'id': 'Yorktown',
+                    'station_id': '8637689',
                     'description':
-                    '<img src="static/8637689.png" width="600">'
+                    '<canvas id="myChart" width="600" height="400"></canvas>',
                 },
                 'geometry': {
                     'type': 'Point',
@@ -85,8 +89,8 @@ map.addLayer({
     'source': 'places',
     'paint': {
         'circle-color': 'red',
-        'circle-radius': 12,
-        'circle-stroke-width': 4,
+        'circle-radius': 10,
+        'circle-stroke-width': 2,
         'circle-stroke-color': 'black'
     }
 });
@@ -110,9 +114,9 @@ map.on('mouseover', 'places', (e) => {
     // Ensure that if the map is zoomed out such that multiple
     // copies of the feature are visible, the popup appears
     // over the copy being pointed to.
-    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+  /*  while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
         coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-    }
+    } */
 
     // Populate the popup and set its coordinates
     // based on the feature found.
@@ -151,10 +155,11 @@ map.on('mouseover', 'places', (e) => {
     }
 });
 
-map.on('mouseleave', 'source', () => {
+map.on('click', () => {
     map.getCanvas().style.cursor = '';
     popup.remove();
 });
+
 });
 
 
