@@ -129,8 +129,15 @@ map.on('mouseover', 'places', (e) => {
     async function tides(station_id) {
         let url_str = "http://ec2-18-233-120-8.compute-1.amazonaws.com:8080/get?station=" + station_id;
         const response = await fetch(url_str);
-        const data = await response.json();
-        
+        const obs = await response.json();
+        const data = {};
+            for (let t in obs) {
+                let dt = t.slice(5);
+                data[dt] = obs[t];
+            } 
+ 
+        console.log(data)
+
         const ctx = document.getElementById('myChart');
 
         new Chart(ctx, {
@@ -138,7 +145,7 @@ map.on('mouseover', 'places', (e) => {
         data: {
             datasets: [{
             label: 'Water Level',
-            data: data.values,
+            data: data,
             // borderWidth: .2,
             }]
         },
