@@ -135,8 +135,6 @@ map.on('mouseover', 'places', (e) => {
                 let dt = t.slice(5);
                 data[dt] = obs[t];
             } 
- 
-        console.log(data)
 
         const ctx = document.getElementById('myChart');
 
